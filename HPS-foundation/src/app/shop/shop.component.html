@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HPS Foundation - Home</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add custom CSS for font styling */
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .header {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .card {
+      font-family: 'Poppins', sans-serif;
+      animation: fadeInUp 1s ease-in-out;
+      margin-bottom: 20px;
+    }
+    .shadow {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .shadow:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  
+  <style>
+    /* Rest of your styles */
+
+    /* Footer styling */
+    .footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      animation: fadeInUp 1s ease-in-out;
+      margin-top: auto; /* Push the footer to the bottom */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .animated-footer {
+      opacity: 0;
+      animation: fadeInUp 1s ease-in-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    .email-link {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px dotted #ffffff;
+      transition: border-bottom 0.3s;
+    }
+
+    .email-link:hover {
+      border-bottom: 1px solid #ffffff;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <h1>Welcome to our Shop</h1>
+
+</header>
+<div class="container mt-4">
+  <div class="d-flex justify-content-end mb-3">
+    <div class="input-group input-group-sm mr-2">
+      <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-icon">
+      <div class="input-group-append">
+        <span class="input-group-text" id="search-icon"><i class="bi bi-search"></i></span>
+      </div>
+      <div>
+        <a routerLink="/login" class="btn btn-link btn-sm mr-8"><i class="bi bi-person-fill bi-sm" style="color: black;"></i></a>
+        <a routerLink="/register" class="btn btn-link btn-sm mr-8"><i class="bi bi-person-plus-fill bi-sm" style="color: black;"></i></a>
+        <a routerLink="/cart" class="btn btn-link btn-sm"><i class="bi bi-cart-fill bi-sm" style="color: black;"></i></a> <!-- Added Cart button -->
+      </div>
+      
+
+
+
+  <!-- Product cards -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-3 shadow"> <!-- Added shadow class -->
+        <div class="card-body">
+          <img src="assets/download11.png" class="card-img-top" alt="T-shirt">
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" min="1" value="1">
+          </div>
+          <div class="form-group">
+            <label for="size">Size:</label>
+            <select class="form-control" id="size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XS">XS</option>
+            </select>
+            <label for="Description">Description:White T-shirt with HPS Logo</label>
+            <label for="price">price: 200 MAD</label>
+          </div>
+          <button class="btn btn-dark" routerLink="/login">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="card mb-3 shadow"> 
+        <div class="card-body">
+          <img src="assets/download11.png" class="card-img-top" alt="T-shirt">
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" min="1" value="1">
+          </div>
+          <div class="form-group">
+            <label for="size">Size:</label>
+            <select class="form-control" id="size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XS">XS</option>
+            </select>
+            <label for="Description">Description:Black T-shirt with HPS Logo</label>
+            <label for="price">price: 200 MAD</label>
+          </div>
+          <button class="btn btn-dark" routerLink="/login">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="card mb-3 shadow"> 
+        <div class="card-body">
+          <img src="assets/download11.png" class="card-img-top" alt="Bottle">
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" min="1" value="1">
+          </div>
+          <div class="form-group">
+            <label for="size">Size:</label>
+            <select class="form-control" id="size">
+              <option value="One Size">One Size</option>
+            </select>
+            <label for="Description">Description:Bottle with HPS Logo</label>
+            <label for="price">price: 70 MAD</label>
+          </div>
+          <button class="btn btn-dark" routerLink="/login">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-3 shadow"> 
+        <div class="card-body">
+          <img src="assets/download11.png" class="card-img-top" alt="Tote Bag">
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" min="1" value="1">
+          </div>
+          <div class="form-group">
+            <label for="size">Size:</label>
+            <select class="form-control" id="size">
+              <option value="One Size">One Size</option>
+            </select>
+            <label for="Description">Description:Tote bag with HPS Logo</label>
+            <label for="price">price: 70 MAD</label>
+          </div>
+        <button class="btn btn-dark" routerLink="/login">Add to Cart</button>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-3 shadow"> 
+        <div class="card-body">
+          <img src="assets/download11.png" class="card-img-top" alt="Tote Bag">
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" min="1" value="1">
+          </div>
+          <div class="form-group">
+            <label for="size">Size:</label>
+            <select class="form-control" id="size">
+              <option value="One Size">One Size</option>
+            </select>
+            <label for="Description">Description: Note book with HPS Logo</label>
+            <div></div>
+            <label for="price">price: 100 MAD</label>
+          </div>
+          <button class="btn btn-dark" routerLink="/login">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-3 shadow"> 
+        <div class="card-body">
+          <img src="assets/download11.png" class="card-img-top" alt="Tote Bag">
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" min="1" value="1">
+          </div>
+          <div class="form-group">
+            <label for="size">Size:</label>
+            <select class="form-control" id="size">
+              <option value="One Size">One Size</option>
+            </select>
+            <label for="Description">Descripion: Key ring with HPS Logo</label>
+            <div></div>
+            <label for="price">price: 70 MAD</label>
+          </div>
+          <button class="btn btn-dark" routerLink="/login">Add to Cart</button>
+        </div>
+

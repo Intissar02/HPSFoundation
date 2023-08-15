@@ -1,0 +1,98 @@
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto: 400,500,700,900&display=swaap');
+ body{
+  font-family: "Roboto", sans-serif;
+ }
+
+.navbar.bg-black {
+  background-color: black;
+}
+
+.navbar {
+  height: 40px;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navbar .btn {
+  margin-top: 1px;
+  margin-left: auto;
+  color: white;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  color: white; 
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  width: 100%;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-toggle.closed {
+  animation: closeEye 0.5s forwards;
+}
+
+@keyframes closeEye {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  
+  
+}
+
+
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HPS Foundation - Home</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+   
+  
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <h1>Welcome to our projects</h1>
+</header>
+
+<div class="container mt-5">
+  <div class="row align-items-center min-vh-50">
+    <div *ngFor="let project of projectsList" class="col-md-4">
+      <div class="card shadow">
+        <img [src]="project.imageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{project.title}}</h5>
+          <p class="card-text">{{project.content}}</p>
+          <p class="card-text"><small class="text-muted">{{project.date | date: 'shortDate'}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+</body>
+</html>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="animated-footer">&copy; 2023 HPS Foundation. All rights reserved.</p>
+        <p class="animated-footer">Contact us: <a href="hps.foundation@hps.com" class="email-link">hps.foundation@hps.com</a></p>
+        <p class="animated-footer">Phone: +123-456-7890</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+
+</style>
+

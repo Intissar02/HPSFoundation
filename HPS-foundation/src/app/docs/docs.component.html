@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Articles - HPS Foundation</title>
+
+<style>
+
+</style>
+
+</head>
+<body>
+  <header class="section-header">
+    <h2>Welcome to our Education Articles</h2>
+    <p>Explore articles related to education and learning.</p>
+  </header>
+
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      <div class="col-lg-4">
+        <div class="card mb-4 article-card">
+          <img class="card-img-top" src="assets/download11.png" alt="Article 1 Image">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">Discover the benefits of interactive learning methods.</p>
+            <p class="card-text"><small class="text-muted">Date: 12/01/2020</small></p>
+          </div>
+          <div class="article-content" id="article-1">
+            <p>“I think part of the reason Kahoot! and other quizzing tools are so popular is because it breaks up instruction and really can engage kids in a way that some of the more traditional teaching methods may not,” said Christine Elgersma, the senior editor for learning content at Common Sense Media, a nonprofit that examines the impact of technology on children. Common Sense’s review gave Kahoot! four out of five stars.
+
+              One “pro” is that it makes formative assessment—tools teachers use to gauge kids’ grasp of new material—engaging. A “con” is that user-created quizzes can be poor quality or inappropriate. Competitors to Kahoot! include Quizizz, Blooket, Gimkit, Quizlet, Formative, Mentimeter, and Plickers.
+              
+              Louisa Rosenheck, the director of learning design for Kahoot!, said in an email that at its core, Kahoot! is “a social experience—everyone gets to answer for themselves, but they are part of a larger group having a shared experience, so it strikes the right balance of independence and community.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card mb-4 article-card">
+          <img class="card-img-top" src="assets/download11.png" alt="Article 2 Image">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">Exploring innovative teaching techniques for better student engagement.</p>
+            <p class="card-text"><small class="text-muted">Date: 12/02/2020</small></p>
+          </div>
+          <div class="article-content" id="article-2">
+            <p>“I think part of the reason Kahoot! and other quizzing tools are so popular is because it breaks up instruction and really can engage kids in a way that some of the more traditional teaching methods may not,” said Christine Elgersma, the senior editor for learning content at Common Sense Media, a nonprofit that examines the impact of technology on children. Common Sense’s review gave Kahoot! four out of five stars.
+
+              One “pro” is that it makes formative assessment—tools teachers use to gauge kids’ grasp of new material—engaging. A “con” is that user-created quizzes can be poor quality or inappropriate. Competitors to Kahoot! include Quizizz, Blooket, Gimkit, Quizlet, Formative, Mentimeter, and Plickers.
+              
+              Louisa Rosenheck, the director of learning design for Kahoot!, said in an email that at its core, Kahoot! is “a social experience—everyone gets to answer for themselves, but they are part of a larger group having a shared experience, so it strikes the right balance of independence and community.</p>
+          </div>
+        </div>
+      </div>
+<div class="col-lg-4">
+  <div class="card mb-4 article-card">
+    <img class="card-img-top" src="assets/download11.png" alt="Article 3 Image">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text">The role of creativity and critical thinking in 21st-century education.</p>
+      <p class="card-text"><small class="text-muted">Date: 12/03/2020</small></p>
+    </div>
+    <div class="article-content" id="article-3">
+      <p>“I think part of the reason Kahoot! and other quizzing tools are so popular is because it breaks up instruction and really can engage kids in a way that some of the more traditional teaching methods may not,” said Christine Elgersma, the senior editor for learning content at Common Sense Media, a nonprofit that examines the impact of technology on children. Common Sense’s review gave Kahoot! four out of five stars.
+
+        One “pro” is that it makes formative assessment—tools teachers use to gauge kids’ grasp of new material—engaging. A “con” is that user-created quizzes can be poor quality or inappropriate. Competitors to Kahoot! include Quizizz, Blooket, Gimkit, Quizlet, Formative, Mentimeter, and Plickers.
+        
+        Louisa Rosenheck, the director of learning design for Kahoot!, said in an email that at its core, Kahoot! is “a social experience—everyone gets to answer for themselves, but they are part of a larger group having a shared experience, so it strikes the right balance of independence and community.</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="lightbox-overlay" id="lightbox-overlay">
+    <div class="lightbox-content">
+      <span class="lightbox-close" id="lightbox-close">&times;</span>
+      <div id="lightbox-article-content"></div>
+    </div>
+  </div>
+
+  <script>
+    const readMoreLinks = document.querySelectorAll('.read-more-link');
+    const lightboxOverlay = document.getElementById('lightbox-overlay');
+    const lightboxArticleContent = document.getElementById('lightbox-article-content');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    readMoreLinks.forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        const articleId = this.getAttribute('data-article');
+        const articleContent = document.querySelector(`#${articleId} .article-content`).innerHTML;
+
+        lightboxArticleContent.innerHTML = articleContent;
+        lightboxOverlay.style.display = 'flex';
+      });
+    });
+
+    lightboxClose.addEventListener('click', function () {
+      lightboxOverlay.style.display = 'none';
+    });
+
+    lightboxOverlay.addEventListener('click', function (event) {
+      if (event.target === lightboxOverlay) {
+        lightboxOverlay.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

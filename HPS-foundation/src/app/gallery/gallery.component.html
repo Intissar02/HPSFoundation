@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - HPS Foundation</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <header class="gallery-header">
+    <h1>Welcome to our Gallery</h1>
+  </header>
+
+  <div class="gallery">
+    <div class="gallery-item" *ngFor="let item of galleryItems" (click)="openLightbox(item.src, item.alt, item.description)">
+      <img [src]="item.src" [alt]="item.alt">
+      <p>{{ item.description }}</p>
+    </div>
+  </div>
+
+  <div class="lightbox-overlay" *ngIf="lightboxOpen">
+    <div class="lightbox-content">
+      <img [src]="lightboxImageSrc" [alt]="lightboxImageAlt">
+      <p>{{ lightboxImageDescription }}</p>
+      <button (click)="closeLightbox()">Remove</button>
+    </div>
+  </div>
+
+  <footer class="footer animated-footer">
+    <p>&copy; 2023 HPS Foundation. All rights reserved. | Contact us at <a href="mailto:info@hpsfoundation.org" class="email-link">info@hpsfoundation.org</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+ 
+    <!-- <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)" style="width: 400px;">
+      <img src="assets/download11.png" class="card-img-top" alt="HPS">        
+      <h2>Login</h2>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password"  required>
+      </div>
+      <button  onclick="onLogin()" class = "btn btn-primary">Login</button>
+      <p class="mt-3">Already registered<a routerLink="/register">register here</a></p>
+    </form> -->
+    <div class="col-md-5">
+      <div class="panel panel-primary">
+        
+        <div class="panel-body">
+            <form #f="ngForm" (ngSubmit)="onLogin(f.value)" >
+              <img src="assets/download11.png" class="card-img-top" alt="HPS"> 
+              <h2>Login </h2>
+              {{f.value | json}}
+                <div class="form-group">
+                  <label class="control-label">Username :</label>
+                  <input type="text" name="email"  class="form-control" ngModel>
+                </div>
+              <div class="form-group">
+                <label class="control-label">Password :</label>
+                <input type="password" name="password" class="form-control" ngModel>
+              </div>
+              <button class="btn btn-primary btn-black" type="submit">Login</button>
+              <p class="mt-3">Already registered?<a routerLink="/register">register here</a></p>
+
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- <form (ngSubmit)="onRegister(form)" #form="ngForm">
+     form fields here -->
+    <!-- <button type="submit">Register</button>
+  </form> --> 

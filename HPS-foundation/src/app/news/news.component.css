@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  .header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .card {
+    font-family: 'Times New Roman', serif;
+    animation: fadeInUp 1s ease-in-out;
+    margin-bottom: 20px;
+  }
+  .shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  .animated-footer {
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  .email-link {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px dotted #ffffff;
+    transition: border-bottom 0.3s;
+  }
+
+  .email-link:hover {
+    border-bottom: 1px solid #ffffff;
+  }

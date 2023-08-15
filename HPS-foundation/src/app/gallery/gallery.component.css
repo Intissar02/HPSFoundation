@@ -1,0 +1,37 @@
+ 
+    .footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .animated-footer {
+      opacity: 0;
+      animation: fadeInUp 1s ease-in-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    .email-link {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px dotted #ffffff;
+      transition: border-bottom 0.3s;
+    }
+
+    .email-link:hover {
+      border-bottom: 1px solid #ffffff;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }

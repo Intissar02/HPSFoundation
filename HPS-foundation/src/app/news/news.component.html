@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HPS Foundation - Home</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <h1>Welcome to our news</h1>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2></h2>
+        <p></p>
+      </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row align-items-center min-vh-50">
+            <div *ngFor="let news of newsList" class="col-md-4">
+                <div class="card">
+                    <img [src]="news.imageUrl" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{news.title}}</h5>
+                        <p class="card-text">{{news.content}}</p>
+                        <p class="card-text"><small class="text-muted">{{news.date | date: 'shortDate'}}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer animated-footer">
+        <p>&copy; 2023 HPS Foundation. All rights reserved. | Contact us at <a href="mailto:info@hpsfoundation.org" class="email-link">info@hpsfoundation.org</a></p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  </style>
+  <script>
+    function copyRib() {
+      var ribText = "545638968968989";
+      var textarea = document.createElement("textarea");
+      textarea.value = ribText;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      alert("RIB copied to clipboard: " + ribText);
+    }
+  </script>
+</head>
+<body>
+  <div class="form-container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Login</div>
+      <div class="panel-body">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+          <img src="assets/download11.png" class="card-img-top" alt="HPS">
+          {{ f.value | json }}
+          <div class="form-group">
+            <label class="control-label">email :</label>
+            <input type="text" name="email" class="form-control" ngModel>
+          </div>
+          <div class="form-group">
+            <label class="control-label">gender :</label>
+            <select name="gender" class="form-control" ngModel>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">RIB :</label>
+            <input type="text" name="ribNumber" class="form-control" value="545638968968989" readonly>
+          </div>
+          <button class="btn btn-primary" type="submit">Donate</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

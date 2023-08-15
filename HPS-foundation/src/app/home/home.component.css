@@ -1,0 +1,38 @@
+.animated-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-card:hover {
+  transform: scale(1.05);
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.objectives-animated,
+.mission-animated {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Add these styles to your existing CSS or in a separate CSS file */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.header {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+}
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
